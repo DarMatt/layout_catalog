@@ -3,9 +3,10 @@
   border: 1px solid #f3f3f3;
   padding: 0 14px;
   font-size: 11px;
+  display: grid;
 
   &__imac {
-    display: block;
+    display: grid;
     width: 160px;
     height: 134px;
     margin: 14px auto 42px;
@@ -34,19 +35,20 @@
   }
 
   &__mark {
-    @include flex-space-between;
-    align-items: center;
+    @include space-between;
+    grid-template-columns: fit-content(50%) fit-content(50%);
     margin-bottom: 20px;
+    align-items: end;
   }
 
   &__review {
     line-height: 13px;
-    text-align: right;
   }
 
   &__price {
-    @include flex-space-between;
-    align-items: baseline;
+    @include space-between;
+    grid-template-columns: fit-content(50%) fit-content(50%);
+    align-items: end;
   }
   
   &__price-text {
@@ -62,7 +64,7 @@
   }
 
   &__button {
-    display: inline-block;
+    display: inline-grid;
     width: 170px;
     height: 40px;
     border: 1px solid $blue;

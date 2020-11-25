@@ -1,12 +1,6 @@
-@mixin flex-space-between {
-  display: flex;
+@mixin space-between {
+  display: grid;
   justify-content: space-between;
-}
-
-@mixin flex-centered {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 @mixin text-style {

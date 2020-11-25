@@ -1,9 +1,9 @@
 .stars {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 15px);
+  gap: 0 4px;
 
   &__item {
-    margin-right: 4px;
-    width: 15px;
     height: 15px;
     background: url(../images/star.svg) center no-repeat;
   }

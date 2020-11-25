@@ -70,17 +70,14 @@
     border: 1px solid $blue;
     border-radius: 5px;
     margin: 0 auto 15px;
-  
     background-color: $blue;
     color: $white;
-  
     font-size: 14px;
     font-weight: bold;
     line-height: 40px;
     @include text-style;
     cursor: pointer;
-    transition: transform 1s, background-color 1s;
-  
+    transition: background-color 1s, color 1s, border-color 1s;
     &:hover {
       background-color: $white;
       color: $blue;

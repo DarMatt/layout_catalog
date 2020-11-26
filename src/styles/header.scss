@@ -1,5 +1,7 @@
 .header {
-  @include flex-space-between;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
   padding: 0 50px;
   align-items: center;
   height: 60px;
@@ -8,10 +10,10 @@
   font-weight: 500;
   text-transform: uppercase;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  
+  margin-bottom: 50px;
 
   &__nav {
-    display: flex;
+    display: grid;
     height: 100%;
   }
 

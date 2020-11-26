@@ -1,14 +1,25 @@
 .product-card {
   border-radius: 5px;
   border: 1px solid #f3f3f3;
-  padding: 15px 14px;
+  padding: 0 14px;
   font-size: 11px;
+  display: grid;
 
   &__imac {
-    display: block;
+    display: grid;
     width: 160px;
     height: 134px;
-    margin: 15px auto 45px;
+    margin: 14px auto 42px;
+    box-sizing: content-box;
+    border: 3px solid transparent;
+    padding: 13px 0 0;
+    transition: transform 0.5s, border-color 0.5s;
+    
+    &:hover {
+      transform: scale(1.2);
+      border-color: #f3f3f3;
+      border-radius: 5px;
+    }
   }
 
   &__title {
@@ -24,19 +35,20 @@
   }
 
   &__mark {
-    @include flex-space-between;
-    align-items: center;
+    @include space-between;
+    grid-template-columns: fit-content(50%) fit-content(50%);
     margin-bottom: 20px;
+    align-items: end;
   }
 
   &__review {
     line-height: 13px;
-    text-align: right;
   }
 
   &__price {
-    @include flex-space-between;
-    align-items: baseline;
+    @include space-between;
+    grid-template-columns: fit-content(50%) fit-content(50%);
+    align-items: end;
   }
   
   &__price-text {
@@ -52,22 +64,20 @@
   }
 
   &__button {
-    display: inline-block;
+    display: inline-grid;
     width: 170px;
     height: 40px;
     border: 1px solid $blue;
     border-radius: 5px;
-    margin: 0 auto;
-  
+    margin: 0 auto 15px;
     background-color: $blue;
     color: $white;
-  
     font-size: 14px;
     font-weight: bold;
     line-height: 40px;
     @include text-style;
     cursor: pointer;
-  
+    transition: background-color 1s, color 1s, border-color 1s;
     &:hover {
       background-color: $white;
       color: $blue;

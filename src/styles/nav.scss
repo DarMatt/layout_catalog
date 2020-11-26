@@ -1,6 +1,7 @@
 .nav {
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
     list-style: none;
     align-items: center;
     width: 100%;
@@ -18,6 +19,7 @@
     text-decoration: none;
     padding: 23px 0;
     position: relative;
+    transition: color 0.5s, transform 0.5s;
 
     &:hover {
       color: $blue;

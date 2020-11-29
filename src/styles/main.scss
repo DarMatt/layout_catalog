@@ -8,5 +8,15 @@
     grid-template-columns: repeat(4, 200px);
     gap: 50px 48px;
     margin-bottom: 78px;
+
+    @media screen and (max-width: 899px) {
+      grid-template-columns: repeat(3, 200px);
+    }
+    @media screen and (max-width: 699px) {
+      grid-template-columns: repeat(2, 200px);
+    }
+    @media screen and (max-width: 499px) {
+      grid-template-columns: repeat(1, 200px);
+    }
   }
 }
